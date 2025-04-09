@@ -10,7 +10,6 @@ router.post("/task/create", async (req, res) => {
     try {
         if (req.body) {
             const task = await TareasModel.create({
-                id: "default",
                 nombre: req.body.nombre,
                 comentario: req.body.comentario,
                 activa: req.body.activa
